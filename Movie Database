@@ -1,0 +1,16 @@
+1.Find movies made after 1997
+σmyear>1997(Movies)
+
+2.Find movies made by Hanson after 1997
+σmyear>1997 ∧ director=‘Hanson_(Movies)
+
+3.Find all movies and their ratings
+πtitle, rating(Movies)
+
+4.Find all actors and directors
+πactor(Actors) ∪ πdirector(Directors)
+
+5.Find Coen’s movies with McDormand
+e1 = πtitle(σactor=‘McDormand_ (Acts))
+e2 = πtitle(σdirector=‘Coen_ (Movies))
+result = e1 ∩ e2
