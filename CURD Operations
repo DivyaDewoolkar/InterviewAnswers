@@ -1,0 +1,25 @@
+##Create Tables
+CREATE TABLE sailors ( sid integer not null,
+sname varchar(32),
+rating integer,
+age real,
+CONSTRAINT PK_sailors PRIMARY KEY (sid) );
+CREATE TABLE reserves ( sid integer not null,
+bid integer not null,
+day datetime not null,
+CONSTRAINT PK_reserves PRIMARY KEY (sid, bid, day),
+FOREIGN KEY (sid) REFERENCES sailors(sid),
+FOREIGN KEY (bid) REFERENCES boats(bid) );
+
+##Insert Data
+INSERT INTO sailors
+( sid, sname, rating, age )
+VALUES ( 22, 'Dustin', 7, 45.0 )
+INSERT INTO reserves
+( sid, bid, day )
+VALUES ( 22, 101, '1998-10-10')
+
+##Read Data
+SELECT [DISTINCT] select-list
+FROM from-list
+WHERE qualification
