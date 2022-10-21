@@ -1,0 +1,14 @@
+##Count
+SELECT COUNT(*) AS total FROM tablename;
+
+##Sum
+SELECT SUM(Columnname) AS "NewColumnname" FROM tablename;   
+
+#Max
+SELECT MAX(Columnname) FROM tablename;
+
+#Min
+SELECT MIN(Columnname) FROM tablename;
+
+#Avg
+SELECT AVG(Columnname) FROM tablename ;
